@@ -23,11 +23,11 @@ export default function NavMenu() {
         <li>
           <SignInButton />
         </li>
-        <li>
-          <AuthCheck>
+        <AuthCheck>
+          <li>
             <SignOutButton />
-          </AuthCheck>
-        </li>
+          </li>
+        </AuthCheck>
       </ul>
     </nav>
   );

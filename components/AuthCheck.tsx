@@ -7,8 +7,6 @@ type Props = {
 
 export default function AuthCheck({ children }: Props) {
   const { data: session, status } = useSession();
-  console.log("session", session);
-  console.log("status", status);
   if (status === "authenticated") {
     return <>{children}</>;
   } else {
