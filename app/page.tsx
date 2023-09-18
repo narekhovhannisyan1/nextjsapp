@@ -1,11 +1,9 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
 export default function Home() {
   return (
     <div>
-      <h1>Home page</h1>
-      <p>some content</p>
+      <h1>Welcome to the home page</h1>
+      <p>A next-gen social media app to connect with friends.</p>
+      <p>To get started, sign up for an account</p>
     </div>
   );
 }
