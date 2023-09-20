@@ -8,16 +8,6 @@ interface Props {
   params: { slug: string };
 }
 
-export async function generateStaticParams() {
-  const posts: Post[] = await fetch("http://127.0.0.1:3000/api/content").then(
-    (res) => res.json()
-  );
-
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
-
 export default async function BlogPostPage({ params }: Props) {
   const posts: Post[] = await fetch("http://127.0.0.1:3000/api/content").then(
     (res) => res.json()
@@ -33,4 +23,13 @@ export default async function BlogPostPage({ params }: Props) {
       ))}
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  const posts: Post[] = await fetch("http://127.0.0.1:3000/api/content").then(
+    (res) => res.json()
+  );
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
